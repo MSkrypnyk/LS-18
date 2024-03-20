@@ -1,0 +1,22 @@
+// ===== GRID SETTINGS =====
+.row {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(370px, 1fr));
+    row-gap: 40rem;
+    column-gap: 30rem;
+    @include tablet {
+        grid-template-columns: 2fr;
+        justify-items: center;
+      }
+    @include mobile {
+      grid-template-columns: 1fr;
+      justify-items: center;
+    }
+  }
+  
+.col {
+    box-shadow: 0rem 22rem 18rem rgba(0, 0, 0, 0.05);
+    background: linear-gradient(268.12deg, rgba(254, 254, 255, 0.032) -11.04%, rgba(255, 255, 255, 0.018) 104.89%);
+    border-radius: 34rem;
+    border:  var(--border);
+}

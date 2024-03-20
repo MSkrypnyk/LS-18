@@ -1,0 +1,57 @@
+.team {
+  padding-bottom: 120rem;
+  @include mobile {
+    padding-bottom: 40rem;
+  }
+  &__title {
+    font-weight: 700;
+    font-size: 42rem;
+    margin-bottom: 30rem;
+    @include mobile {
+      font-size: 30rem;
+    }
+  }
+
+  &__desc {
+    font-weight: 400;
+    font-size: 16rem;
+    margin-bottom: 40rem;
+    max-width: 480rem;
+    margin-inline: auto;
+  }
+}
+.team-list {
+  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+}
+
+.team-item {
+  padding: 32rem 10rem 35rem 10rem;
+  @include mobile {
+    width: 70%;
+  }
+  &__img img {
+    box-shadow: 0 22px 18px 0 rgba(0, 0, 0, 0.05);
+  }
+
+  &__title {
+    font-weight: 500;
+    font-size: 28rem;
+    margin-top: 10rem;
+    margin-bottom: 7rem;
+  }
+
+  &__desc {
+    font-weight: 400;
+    font-size: 16rem;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    margin-bottom: 11rem;
+  }
+
+  &__social {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    gap: 12rem;
+  }
+}

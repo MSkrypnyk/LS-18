@@ -1,0 +1,88 @@
+.subscribe {
+  box-shadow: 0 22px 18px 0 rgba(0, 0, 0, 0.05);
+  background: linear-gradient(
+    180deg,
+    rgba(254, 254, 255, 0.05) 0%,
+    rgba(255, 255, 255, 0.05) 100%
+  );
+  border: var(--border);
+  border-radius: 34rem;
+  padding: 50rem 20rem 38rem 20rem;
+  margin-bottom: 80rem;
+  &__title {
+    font-weight: 700;
+    font-size: 42rem;
+    margin-bottom: 13rem;
+    @include mobile {
+      font-size: 20rem;
+    }
+  }
+
+  &__desc {
+    font-family: var(--third-family);
+    font-weight: 400;
+    font-size: 16rem;
+    line-height: 187%;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 29rem;
+  }
+}
+
+.subscribe-form {
+  border-radius: 70rem;
+  box-shadow: 10px 24px 54px 0 rgba(0, 0, 0, 0.07);
+  background: linear-gradient(
+    180deg,
+    rgba(254, 254, 255, 0.12) 0%,
+    rgba(255, 255, 255, 0.12) 100%
+  );
+  padding: 10rem 44rem;
+  padding-right: 10rem;
+  gap: 10rem;
+  display: flex;
+  max-width: 860rem;
+  margin-inline: auto;
+  @include mobile {
+    padding: 10rem 30rem;
+    padding-right: 10rem;
+  }
+
+  &__input {
+    width: 100%;
+    background: transparent;
+    border: 0;
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: 18rem;
+    line-height: 167%;
+    color: rgba(255, 255, 255, 0.9);
+
+    &::placeholder {
+      color: rgba(255, 255, 255, 0.8);
+    }
+  }
+
+  &__btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8rem;
+    background: var(--bg-gradient);
+    border-radius: 70rem;
+    padding: 15rem 49rem 15rem 25rem;
+    font-family: var(--second-family);
+    font-weight: 500;
+    font-size: 20rem;
+    line-height: 150%;
+    color: var(--c-text-white);
+    opacity: 0.9;
+    @include mobile {
+      padding: 7rem 14rem;
+    }
+  }
+
+  &__btn-text {
+    @include mobile {
+      display: none;
+    }
+  }
+}

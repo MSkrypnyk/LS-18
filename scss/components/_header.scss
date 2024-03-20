@@ -1,0 +1,134 @@
+.header {
+  padding-top: 40rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20rem;
+  @include mobile {
+    padding-top: 20rem;
+  }
+  &__logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 8rem;
+    font-family: var(--second-family);
+    font-weight: 500;
+    font-size: 20rem;
+  }
+
+  &__nav {
+    @include tablet {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      flex-direction: column;
+      left: 0;
+      top: 0;
+      z-index: 3;
+      align-items: center;
+      padding-top: 200rem;
+      transform: translateX(-120%);
+      transition: 0.4s all ease-in-out;
+    }
+  }
+
+  &__ul {
+    display: flex;
+    align-items: center;
+    gap: 60rem;
+    @include tablet {
+      flex-direction: column;
+    }
+  }
+
+  &__li {
+    transition: var(--transition);
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  &__a {
+    font-weight: 500;
+    font-size: 14rem;
+    color: var(--c-secondary);
+    @include mobile {
+      font-size: 20rem;
+    }
+  }
+
+  &__btn {
+    background: var(--bg-gradient);
+    border-radius: 5rem;
+    padding: 12rem 24rem;
+    @include mobile {
+      display: none;
+    }
+  }
+}
+
+.burger {
+  position: relative;
+  width: 30rem;
+  height: 20rem;
+  display: none;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3rem;
+    border-radius: 2rem;
+    background-color: var(--c-text-white);
+    transition: 0.4s all ease-in-out;
+  }
+
+  &::before {
+    top: 0;
+  }
+
+  &::after {
+    bottom: 0;
+  }
+
+  @include tablet {
+    display: block;
+    z-index: 4;
+  }
+
+  &__line {
+    position: absolute;
+    right: 0;
+    top: 9rem;
+    transform: scaleY(-50%);
+    width: 100%;
+    height: 3rem;
+    border-radius: 2rem;
+    background-color: var(--c-text-white);
+    transition: 0.4s all ease-in-out;
+  }
+}
+
+.burger--active .burger__line {
+  opacity: 0;
+}
+
+.burger--active::before {
+  top: 50%;
+  transform: rotate(45deg);
+}
+
+.burger--active::after {
+  bottom: auto;
+  top: 50%;
+  transform: rotate(-45deg);
+}
+
+.nav--visible {
+  transform: none;
+}
+
+.stop-scroll {
+  overflow: hidden;
+}
